@@ -1,0 +1,11 @@
+.element-categorie {
+    background-color:rgb(155, 203, 203);
+    transition: transform 0.9s;
+}
+
+.zoomed {
+    transform: rotate(3deg) scale(1.0);
+    background-color: var(--primary);
+    box-shadow: 0 1em 2em grey;
+    font-size: 1.2em;
+}

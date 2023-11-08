@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Loren Kociko">
+    <meta name="description" content="e learning system">
+    <meta name="keywords" content="exam">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Madalearning</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <main>
+        <div id="title">
+            <h1>Entrainement aux certifications en développement web</h1>
+        </div>
+        <div id="container">
+            <div id="card-index">
+                <ul>
+                    <a href="./casual.html">
+                        <li>
+                            Entraînement libre
+                        </li>
+                    </a>
+                    <a href="#" onclick="changeState('simu')">
+                        <li>
+                            Exercice d'examen
+                        </li>
+                    </a>
+                    <a href="#" onclick="changeState('about')">
+                        <li>
+                            <p>A propos</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div id="card-simulation">
+                <div id="card-select">
+                    <div class="titles">Temps:</div>
+                    <div id="time-cont" class="btn-cont">
+                        <input type="button" value="30'" class="time-in" id="time-30">
+                        <input type="button" value="60'" class="time-in" id="time-60">
+                        <input type="button" value="90'" class="time-in" id="time-90">
+                        <input type="button" value="150'" class="time-in selected" id="time-150">
+                        <input type="button" value="Unlimited" class="time-in" id="time-unlimited">
+                    </div>
+                    <div class="titles">Questions:</div>
+                    <div id="question-cont" class="btn-cont">
+                        <input type="button" value="30" class="question-in" id="question-30">
+                        <input type="button" value="60" class="question-in" id="question-60">
+                        <input type="button" value="100" class="question-in selected" id="question-100">
+                        <input type="button" value="200" class="question-in" id="question-200">
+                        <input type="button" value="All" class="question-in" id="question-all">
+                    </div>
+                </div>
+                <hr>
+                <div id="checkboxes">
+
+                    <div>
+                        <h3>Choisir le type d'entrainement:</h3>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain1" class="checks">
+                        <label>W3Schools Certifications</label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain2" class="checks">
+                        <label>FreeCodeCamp Certifications</label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain3" class="checks">
+                        <label>Microsoft Certified: HTML, CSS, and JavaScript Fundamentals </label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain4" class="checks">
+                        <label>Google Web Developer Certifications</label>
+                    </div>
+                </div>
+
+                <a id="start-game" href="#" onclick="startExam()">Start Exam</a>
+            </div>
+            <div id="card-about">
+                <h2>Entrainement en HTML, CSS et Javascript</h2>
+                <hr>
+                <p>Pour vous aider dans votre apprentissage du développement web en HTML, CSS et JavaScript, ce site a été créé.
+                    Il propose une série d'exercices et de simulations pour vous permettre de vous entraîner. Vous pourrez ainsi mieux appréhender le format des examens de certification,
+                    qui sont présentés sous forme de questions à choix multiples (QCM) sur les sites d'apprentissage, ainsi que sur notre site d'apprentissage e-Mada learning. <br> Bonne pratique !
+                    </p>
+                <hr>
+                <h3>Created by: e-Madalearning</h3>
+                <div id="socials">
+                    <a href="" target="_blank"><img src="./Icons/in.png" class="icons" alt="Linkedin Icon"></a>
+                    <a href="" target="_blank"><img src="./Icons/github.png" class="icons" alt="GitHub Icon"></a>
+                    <a href="" target="_blank"><img src="./Icons/web.png" class="icons" alt="Website Icon"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <a id="back-div" href="#" onclick="changeState('main')"><img id="back-btn" src="./Icons/back.png"></a>
+    <div id="contacts">
+        <h4 style="padding-bottom: 10px;">e-MadaLearning </h4>
+        <div id="icons-social">
+            <a href="" target="_blank" class="icons"><img src="./Icons/in.png" class="icons" alt="Linkedin Icon"></a>
+            <a href="" target="_blank" class="icons"><img src="./Icons/github.png" class="icons" alt="GitHub Icon"></a>
+            <a href="" target="_blank" class="icons"><img src="./Icons/web.png" class="icons" alt="Website Icon"></a>
+        </div>
+    </div>
+    <script>
+        changeState('main')
+
+        function startExam() {
+            let timeQuestions = document.querySelectorAll(".selected")
+            let storedData = {}
+            storedData.time = timeQuestions[0].value
+            storedData.questions = timeQuestions[1].value
+            let checkboxesCollection = document.querySelectorAll(".checks")
+            let selectedExams = []
+            for (let i = 0; i < checkboxesCollection.length; i++) {
+                if (checkboxesCollection[i].checked) {
+                    selectedExams.push(checkboxesCollection[i].id)
+                }
+            }
+            storedData.selectedExams = selectedExams
+            localStorage.setItem('exam', JSON.stringify(storedData));
+            window.location.href = "./exam.html";
+        }
+
+
+        function changeState(state) {
+            if (state === "main") {
+                document.getElementById("card-index").style.display = "block"
+                document.getElementById("card-simulation").style.display = "none"
+                document.getElementById("card-about").style.display = "none"
+                document.getElementById("back-btn").style.display = "none"
+            } else if (state === "simu") {
+                document.getElementById("card-index").style.display = "none"
+                document.getElementById("card-simulation").style.display = "grid"
+                document.getElementById("card-about").style.display = "none"
+                document.getElementById("back-btn").style.display = "block"
+            } else if (state === "about") {
+                document.getElementById("card-index").style.display = "none"
+                document.getElementById("card-simulation").style.display = "none"
+                document.getElementById("card-about").style.display = "block"
+                document.getElementById("back-btn").style.display = "block"
+            }
+        }
+
+        const allTimeInputs = document.querySelectorAll(".time-in")
+        const allQuestionInputs = document.querySelectorAll(".question-in")
+        for (let i = 0; i < allTimeInputs.length; i++) {
+            allTimeInputs[i].addEventListener("click", () => {
+                resetSelected(allTimeInputs)
+                allTimeInputs[i].classList.add("selected")
+            });
+        }
+        for (let i = 0; i < allQuestionInputs.length; i++) {
+            allQuestionInputs[i].addEventListener("click", () => {
+                resetSelected(allQuestionInputs)
+                allQuestionInputs[i].classList.add("selected")
+            });
+        }
+
+        function resetSelected(list) {
+            for (let i = 0; i < list.length; i++) {
+                list[i].classList.remove("selected")
+            }
+        }
+    </script>
+</body>
+
+</html>

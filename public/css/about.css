@@ -1,0 +1,75 @@
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+    --white:#fff;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-header{
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-4.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.title-page-about,
+.groupe-nav {
+    text-align: center;
+    margin: auto;
+}
+  
+
+.a-nav-inline,
+span {
+    color: var(--light);
+    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+
+}
+
+.title-page-about{
+    color: var(--light);
+    font-family: 'Nunito', sans-serif;
+    font-size: 4em;
+}
+.groupe-nav {
+    margin-top: 20px; 
+}
+
+.container-service,
+.container-about,
+.container-category-section,
+.container-courses-section,
+.container-section-instructors,
+.container-section-testimonial{
+    margin-bottom: 10vh;
+}
+
+.col-about-image{
+    margin-right: 1vh;
+}
+.col-about-text{
+    margin-left: 1vh;
+}
+
+.img-right-alt{
+    margin-top: 2.5vh;
+}

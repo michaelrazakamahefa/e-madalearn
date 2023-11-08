@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Loren Kociko">
+    <meta name="description" content="CCNA 200-301 Practice Exam">
+    <meta name="keywords" content="cisco, CCNA, EXAM, MOCK, questions, practice, answers, 200-301">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web : Entrainement libre</title>
+    <link rel="stylesheet" href="./css/casual.css">
+</head>
+
+<body>
+    <div id="fontBtns">
+        <label for="plusBtn">Taille de la police: </label>
+        <input type="button" id="plusBtn" class="fontBtn" value="+">
+        <input type="button" id="minusBtn" class="fontBtn" value="-">
+    </div>
+    <div id="mode-display" style="position: absolute; top: 0; left: 0; padding: 10px;" onclick="toggler()">
+        <a href="#"><img id="modeicon" style="width: 60%;" src="./Icons/dark.png"></a>
+    </div>
+
+    <script>
+        let state = 'day'
+
+        function toggler() {
+            if (state === 'day') {
+                state = 'night'
+                document.getElementById("modeicon").src = "./Icons/day.png"
+                document.body.style.setProperty("background-color", "rgb(60, 64, 67)", "important")
+                document.body.style.setProperty("color", "rgba(255, 255, 255, 0.7)", "important")
+                document.getElementById("modeicon").style.filter = "invert(1)"
+                document.body.style.transition = "0.5s"
+
+            } else {
+                state = 'day'
+                document.getElementById("modeicon").src = "./Icons/dark.png"
+                document.body.style.setProperty("background-color", "white", "important")
+                document.body.style.setProperty("color", "black", "important")
+                document.getElementById("modeicon").style.filter = "invert(0)"
+                document.body.style.transition = "0.5s"
+
+            }
+        }
+    </script>
+
+
+    <h1 class="title-h">Web : Entrainement libre</h1>
+    <main id="main-container">
+        <div id="questiondiv">
+            <div id="question">S'il vous plaît, sélectionnez un module que vous souhaitez étudier.</div>
+            <div id="answers"></div>
+            <div id="buttons">
+                <input type="button" class="btns" disabled="true" id="previousBtn" value="(<) Previous">
+                <input type="button" class="btns" disabled="true" id="checkBtn" value="Check (⎵)">
+                <input type="button" class="btns" disabled="true" id="nextBtn" value="Next (>)">
+            </div>
+        </div>
+        <div id="menudiv">
+            <div id="det">
+                <div id="checkboxes">
+                    <div>
+                        <h3>Choisir le type d'entrainement:</h3>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain1" class="checks">
+                        <label>W3Schools Certifications</label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain2" class="checks">
+                        <label>FreeCodeCamp Certifications</label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain3" class="checks">
+                        <label>Microsoft Certified: HTML, CSS, and JavaScript Fundamentals </label>
+                    </div>
+                    <div class="subbox">
+                        <input type="checkbox" id="webtrain4" class="checks">
+                        <label>Google Web Developer Certifications</label>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="numq"></div>
+    </main>
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/code.js">
+    </script>
+</body>
+
+</html>

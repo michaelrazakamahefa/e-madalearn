@@ -1,0 +1,387 @@
+/* Définition des couleurs */
+:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+    --white: #fff;
+}
+
+/* Définition de la police */
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 19%;
+    margin-left: 10em;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Pour cacher les cours dès l'ouverture de la page */
+.course-content {
+    display: none;
+}
+
+/* Mettre la carte et le détail sur la même ligne */
+.content-container,
+.detail-chapter {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-right: 0; /* Ajout pour supprimer la marge */
+}
+
+/*header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--primary); /* Couleur de fond du header */
+    color: var(--white); /* Couleur du texte */
+  }
+  
+  .title-html {
+    font-size: 2em;
+    margin-left: 3em;
+    font-family: 'Nunito',sans-serif;
+  }
+  
+  .img-home {
+    width: 3em;
+    height: 3em;
+    margin-right: 6em;
+
+  }
+  
+
+.detail-chapter{
+    width: 60%;
+    margin-left: 5em;
+}
+
+
+/* Mise en forme de la carte */
+.course-item {
+    font-family: 'Heebo', sans-serif;
+    padding: 1em;
+    margin: 1em;
+    max-width: 300px;
+    cursor: pointer;
+    font-size: 0.8em;
+    background-color: var(--light);
+    transition: transform 0.5s;
+}
+
+.course-item:hover {
+    background-color: var(--primary);
+    transform: scale(1.07);
+}
+
+.course-item:hover * {
+    color: var(--white); /* Change la couleur du texte au survol */
+}
+
+.course-item:hover h2 {
+    text-decoration:underline;
+}
+
+.course-item h2 {
+    font-size: 1.5em;
+    transition: color 0.3s; /* Ajoute une transition pour le changement de couleur de la police */
+}
+
+.course-item p {
+    margin: 0.5em 0;
+}
+
+.chapter-list {
+    font-family: 'Nunito', sans-serif;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Fin de la mise en forme de la carte */
+
+
+/* Mise en forme du détail des chapitres */
+.chapter-title,
+.chapter-details {
+    flex: 1;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.chapter-title{
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark);
+    overflow: auto;
+    margin-bottom: 4em;
+}
+
+.chapter-title h1 {
+    font-size: 1em;
+}
+
+.chapter-title h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--primary);
+}
+.chapter-title p {
+    text-align: justify;
+}
+
+.chapter-details {
+    position: absolute; /*mra*/
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.chapter-details a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.chapter-details label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.chapter-details input[type="file"] {
+    margin-top: 5px;
+}
+
+.chapter-details input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.chapter-details input[type="file"],
+.chapter-details input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.chapter-details input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.chapter-details input[type="file"] {
+    display: none;
+}
+
+.chapter-details label[for="miniProjetFile1"] {
+    cursor: pointer;
+    background-color: #06BBCC;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.chapter-details label[for="miniProjetFile1"]:hover {
+    background-color: #05a6b8;
+}
+
+.chapter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+/* fin mise en forme détail chapitre */
+
+/*Mise en forme fenêtre popup apprendre*/
+.details-popup {
+    background:var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 500 10px rgba(8, 164, 203, 0.158);
+    font-family: 'Heebo', sans-serif;
+}
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+
+}
+.close-details {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-header h3 {
+    margin: 0;
+}
+/**/
+.pdf-container {
+    display: flex;
+    align-items: center;
+}
+
+.pdf-link {
+    margin-right: 10px;
+}
+
+/*bouton de téléchargement*/
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #06BBCC;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-button img {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.download-button:hover {
+    background-color: #05a6b8;
+}
+
+
+/* Boutons "Abandonner" et "Valider" */
+.abandon-button,
+.validate-button {
+    padding: 10px 20px;
+    font-size: 10px;
+    width: 8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.abandon-button {
+    background-color: #FF6F61;
+    color: #fff;
+}
+
+.validate-button {
+    background-color: #2ECC71;
+    color: #fff;
+}
+
+.abandon-button:hover,
+.validate-button:hover {
+    opacity: 0.8;
+}
+/*fin mise en forme fenêtre popup apprendre*/
+
+/*barre de progression*/
+.progress-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .progress-label {
+    color: var(--dark);
+    width: 80px;
+
+    font-weight: bold;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    appearance: none;
+    background-color: #ddd;
+  }
+  
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: #ddd;
+  }
+  
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: #06BBCC;
+  }
+  
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+    background-color: #06BBCC;
+  }
+
+
+  /*fin barre progression*/
+
+  /*intro*/
+  .intro-container {
+    font-family: 'Nunito',sans-serif;
+    margin-left: 11em;
+    margin-right: 11em;
+
+  }
+  
+  .h2-intro {
+    font-size: 2em;
+    color: var(--primary); 
+  }
+  
+  .p-intro {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  /*bouton reset, reset, réinitialiser le filtre de niveau*/
+
+  .resetButton {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    float: right;
+    background-color: var(--light);
+    transition: background-color 0.3s, transform 0.3s; 
+    margin-left: auto;
+}
+
+.resetButton:hover {
+    background-color: var(--primary) 
+}
+/*fin bouton reset*/
+  /*mise en forme du bouton apprendre*/
+  .show-details {
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px; /* Rembourrage interne du bouton */
+    border: none; /* Suppression de la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de type main */
+    font-size: 16px; /* Taille de la police */
+}
+
+.show-details:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}

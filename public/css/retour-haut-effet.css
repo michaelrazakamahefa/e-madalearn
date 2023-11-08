@@ -1,0 +1,16 @@
+/*-------- faire clignoter le bouton retour vers le haut--*/
+@keyframes blinkAndScale {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  
+  .retour-haut img {
+    animation: blinkAndScale 1s infinite;
+  }
+  

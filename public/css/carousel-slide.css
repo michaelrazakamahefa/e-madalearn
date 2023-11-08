@@ -1,0 +1,37 @@
+/* Styles spécifiques pour le slide down */
+.slide-down {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+  
+  .slide-down.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Styles spécifiques pour le slide right et left */
+  .slide-right,
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .slide-right.active,
+  .slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Styles spécifiques pour le carousel */
+  .carousel-item {
+    display: none;
+  }
+  
+  .carousel-item.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 2s ease, transform 2s ease;
+  }
+  

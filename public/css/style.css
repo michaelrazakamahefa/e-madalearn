@@ -1,0 +1,939 @@
+/*Définition des couleurs*/:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+    --white:#fff;
+}
+
+/*Définition de la police*/
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*** Navbar ***/
+/**définition de la police**/
+.navbar-brand{
+    font-family: 'Nunito', sans-serif;
+}
+.navbar-nav{
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+}
+.navbar {
+    background-color: var(--white);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar .navbar-brand {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.navbar .navbar-brand:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--dark);
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+}
+
+.sign-item {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-item:hover {
+    background-color: #0056b3;
+  }
+
+  .sign-item {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+/*----- navbar menu déroulant*/
+/* Votre CSS existant ici */
+
+/* Styles pour le menu déroulant */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    background:var(--white);
+    z-index: 999;
+}
+
+
+/*------------------ partie service----------*/
+.container-service {
+    font-family:'Heebo', sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.row-service {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-service {
+    flex: 1;
+    margin: 1%;
+    max-width: 30%;
+}
+
+.item-service {
+    background-color: var(--light); 
+    padding: 15%;
+    text-align: center;
+}
+
+.serv img {
+    max-width: 100%;
+    height: auto;
+}
+
+.t-serv {
+    font-size: 1.5em;
+    font-weight: bold; 
+    margin-top: 1%; 
+}
+
+.p-serv {
+
+    font-size: 1em; 
+    margin-top: 10px; 
+}
+/*------ effet dans le service----*/
+.item-service {
+    transition: transform 0.5s, opacity 0.5s, background-color 0.5s; 
+  }
+  
+  .item-service:hover {
+    transform: scale(1.1); 
+    opacity: 1; 
+    background-color: var(--primary)
+  }
+  .item-service:hover .t-serv, .item-service:hover .p-serv {
+    color: white; 
+  }
+  .serv:hover path {
+    fill: var(--white); 
+  }
+  
+  
+/*------------------fin partie service-------------------------------*/
+/*------------------- début about section---------------------------------*/
+.container-about {
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.row-about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-about-image, .col-about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.col-about-text{
+    margin-left: 3em;
+}
+
+.img-container-about {
+    max-width: 100%;
+}
+
+.img-about {
+    max-width: 100%;
+    max-height: 35em;
+    height: auto;
+}
+.row-liste-about {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+  
+  .col-li-about {
+    width: 50%; /* Chaque colonne prendra 50% de la largeur */
+    box-sizing: border-box; /* Inclure les marges et les bordures dans la largeur */
+    padding: 10px; /* Espacement entre les éléments */
+  } 
+  
+/*---- personnaliser les font family d'about*/
+.title-section-about, .title-about, .p-about, .labout, .btn-readmore {
+    font-family:'Nunito', sans-serif; 
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    line-height:1.2;
+    left:0;
+    right: 0;
+}
+
+.title-section-about{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.title-about {
+    font-size: 2em; 
+
+}
+
+.p-about {
+    font-size: 1em !important; 
+    margin-top: 1em; 
+    line-height: 1.6; 
+}
+
+.labout {
+    font-size: 0.9em; 
+    padding-left: 1em; 
+    padding-top: 1.5em;
+}
+
+.col-li-about {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container-btn-readmore{
+    padding:150px !important;
+}
+.btn-readmore {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    display: inline-block;
+    margin-top: .5rem !important;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em; 
+}
+
+.btn-readmore:hover {
+    background-color: #0056b3; 
+}
+/*------------------ fin about section--------------------------*/
+/*-------------------- section categorie start------------------*/
+.title-categorie
+.title-courses-categorie {
+    font-family:'Nunito', sans-serif; 
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    line-height:1.2;
+    left:0;
+    right: 0;
+}
+
+.title-categorie{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.title-about {
+    font-size: 2em; 
+
+}
+
+.container-category-section,
+.container-categorie {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.container-category-section{
+    padding-top: 3em;
+}
+.title-categorie,
+.title-courses-categorie {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.container-categorie {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row-categorie {
+    display: flex; /* Affiche les éléments sur une même ligne */
+    justify-content: space-between; /* Espace uniformément les éléments horizontalement */
+}
+
+.element-categorie {
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: 2em;
+    text-align: center;
+}
+
+.title-img-categorie {
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.element-categorie {
+    padding: 1em;
+    margin: 1em;
+    max-width: 15em;
+    text-align: center;
+}
+
+.img-categorie {
+    max-width: 100%;
+    height: auto; /* Pour maintenir le rapport hauteur/largeur de l'image */
+}
+
+.title-img-categorie {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.description-categorie {
+    color: #888;
+    font-size: 0.8em; /* Ajustez la taille de la police selon vos préférences */
+}
+
+.link-categorie{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+.description-categorie{
+    color: black;
+}
+/*----------------- fin section catégorie--------------------*/
+
+
+/*------------------ début séction courses -MRA---------------*/
+.container-courses-section {
+    padding-top: 5em;
+    max-width: 50%;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.container-courses {
+    text-align: center;
+}
+
+.row-container-courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-container-courses {
+    flex: 1;
+    margin-left: 2em;
+    margin-bottom: 3em;
+}
+
+.course-container {
+    background-color:var(--light);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-title-courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.info-courses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.teacher-info, .time-info, .students-info {
+    flex: 1;
+}
+
+.teacher-info {
+    margin-right: 0px;
+}
+
+.item-courses {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-courses {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.section-title-courses,
+.title-pop-courses {
+    font-family:'Nunito', sans-serif; /* Votre choix de font-family */
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    line-height:1.2;
+    left:0;
+    right: 0;
+}
+
+.section-title-courses{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}.item-courses {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.img-courses {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+.course-container * {
+    font-family: 'Nunito', sans-serif; 
+}
+
+.info-courses {
+    border-top: 1px solid rgb(207, 207, 207); 
+    padding-top: 10px; 
+}
+.time-info {
+    border-left: 1px solid rgb(207, 207, 207); 
+    border-right: 1px solid rgb(207, 207, 207); /
+
+}
+
+/*--------------- readme et join now bouton*/
+.readmore-joinnow {
+    position: absolute;
+    align-items: center;
+    top: 75%;
+    right: 20%;
+}
+.btn-readmore-courses,
+.btn-joinnow-courses {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    background-color: rgb(155, 203, 203);
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-readmore-courses {
+    margin-right: 0; 
+}
+.btn-joinnow-courses{
+    margin-left: 0;
+}
+
+
+.btn-readmore-courses:hover,
+.btn-joinnow-courses:hover {
+    background-color: var(--primary);
+    font-weight: bold;
+    color: #fff;
+}
+/*---------------fin readme et join now bouton-----*/
+/*--------- effet zoom de l'image au survol-------*/
+.course-container:hover .img-courses {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+/*---------fin effet zoom*/
+
+/*---------------------courses end ---------------------------*/
+/*effet zoom et changement de couleur au survol d'un cours*/
+
+.course-container:hover .title-courses {
+    color: var(--primary);
+    font-size: 1em;
+}
+
+/*----------------------team instructors start*/
+.container-title-instructors,
+.row-container-instructors {
+    text-align: center;
+    font-family: 'Nunito',sans-serif;
+}
+.section-container-instructors{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.img-facebook,
+.img-twitter,
+.img-insta{
+    width: 2.5em; /* 1em équivaut à la taille de la police de base */
+    height: 2.5em;
+    margin-left: 1em;
+}
+.container-identity-instructors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center; 
+}
+.img-team-instructors {
+    position: relative; 
+}
+
+.name-instructors{
+    font-size: 1.25rem;
+}
+.container-title-instructors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row-container-instructors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-instructors {
+    background-color: var(--light);
+    margin: 10px;
+    max-width: 20em;
+}
+
+.team-item-instructors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media-instructors {
+    display: flex;
+    justify-content: center;
+}
+
+.name-instructors {
+    display: flex;
+    align-items: center;
+}
+
+.img-instructors {
+    margin-bottom: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+/*------effet survol instructor*/
+.item-instructors:hover .img-instructors {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+.item-instructors:hover .team-item-instructors {
+    background-color: var(--primary);
+    transition: transform 0.3s ease; 
+}
+
+
+
+/*-------------------------team instructors end*/
+/*-------------------------testimonal start*/
+.container-title-testimonial,
+.container-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title-testimonial,
+.title-testimonial {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.section-title-testimonial{
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 1rem;
+
+}
+.container-testimonial .item-testimonial {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.img-testimonial {
+    border-radius: 50%; 
+    padding: 1em;
+    border: solid 1px var(--primary);
+    width: 4em; 
+    height: 4em;
+    object-fit: cover; 
+}
+
+.client-name,
+p {
+    margin:0;
+    font-family: 'Nunito',sans-serif;
+}
+.item-testimonial {
+
+    text-align: center; 
+    width: 40%; 
+    display: inline-block; 
+}
+.client-name,
+.profession,
+.p-testimonial {
+    font-family: 'Heebo', sans-serif;
+
+}
+.client-name{
+    font-size: 1.25rem;
+}
+.profession{
+    margin-bottom: 1.5rem;
+
+}
+.p-testimonial{
+    background-color: var(--primary);
+    padding: 1em;
+    color: var(--white);
+}
+/**/
+/**---------------- testimonial end*/
+/*------------------footer starts-----*/
+.container-footer-up {
+    display: flex; 
+    flex-direction: column;
+}
+.item-copyright,
+.container-footer-menu{
+    padding-top: 2em;
+}
+
+.container-copyright{
+    margin-left: 8rem;
+}
+.footer-up {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.container-quick-link,
+.container-contact,
+.container-gallery,
+.container-newsletter {
+    flex-basis: calc(20% - 1em);
+    box-sizing: border-box; 
+
+}
+.container-img {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.item-gallery {
+    flex-basis: calc(29% - 1px); 
+    margin: 1px;
+    box-sizing: border-box; 
+    padding: 0;
+}
+
+.img-gallery {
+    max-width: 100%; 
+    height: auto; 
+}
+.container-quick-link {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+}
+
+.btn-quick-link {
+    margin: 0.5em 0;
+}
+
+.content-footer-menu a {
+    padding-left: 3em;
+    padding-right: 1em;
+    align-items: center;
+}
+.row-copyright {
+    display: flex;
+    align-items: right;
+}
+.container-footer-menu {
+    margin-left: auto;
+    text-align: center;
+    
+}
+footer{
+    background-color: var(--dark);
+    padding-top: 3rem;
+    margin-top: 3rem;
+    color: var(--white);
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.container-contact img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.item-contact {
+    display: inline-block; 
+    vertical-align: middle; 
+    padding-bottom:2em;
+
+}
+
+.detail-adress {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin: 0; 
+    padding-bottom: 2em;
+    padding-left: 1em;
+}
+
+.container-contact {
+    width: 100%;
+    white-space: nowrap;
+}
+.title-quick-link,
+.title-contact,
+.title-gallery,
+.title-newsletter {
+    font-size: calc(1.275rem + .3vw);
+    font-weight: 700;
+    font-weight: bold; 
+
+}
+.container-quick-link{
+    padding-left: 10rem;
+}
+.container-contact{
+    padding: 0;
+
+}
+
+.container-newsletter{
+    margin-right: 15em;
+}
+/*---- quicklink-----*/
+.btn-quick-link {
+
+    padding: 0.5em; 
+    color: var(--white);
+    text-decoration: none; 
+}
+
+.btn-quick-link:hover {
+    color: var(--primary); 
+}
+
+.logo-social-media{
+    margin-top: 1em;
+    width: 3em;
+    height: auto;
+    border-radius: 50%; 
+    padding: 0;
+}
+.row-copyright{
+    margin-top: 1em;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-top: 0.1em solid gray;
+}
+footer a {
+    padding: 0.5em; 
+    color: var(--white);
+    text-decoration: none; 
+}
+
+footer a:hover{
+    color: var(--primary);
+}
+.a-cookies{
+    padding-top:0.1em ;
+    border-left: 0.1em solid gray;
+    border-right: 0.1em solid gray;
+}
+.a-help{
+    padding-top: 0.1em;
+    border-right: 0.1em solid gray;
+}
+.content-copyright{
+    padding-bottom: 2em;
+    margin-right: 20rem;
+}
+.retour-haut {
+    position: fixed;
+    bottom: 7em; 
+    right: 7em; 
+}
+/*-----------news letter----------------*/
+.container-newsletter {
+    width: 25%; /* 25% de la largeur parente */
+}
+
+.container-newsletter-email {
+    margin-top: 10px; 
+}
+
+.email-newspaper {
+    width: 70%; /* 80% de la largeur parente */
+    height: 3em;
+    font-size: 1em; 
+    padding: 5px; 
+    left: 0;
+    right: 1em;
+
+
+}
+
+.btn-email-newspaper {
+    font-family: 'Nunito',sans-serif;
+    font-size: 2em; 
+    padding: 0.25em 0.5em; 
+    background-color: var(--primary);
+    border: 0.1em solid var(--white);
+
+}
+.container-newsletter-email {
+    position: relative; 
+}
+
+.email-newspaper,
+.btn-email-newspaper {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+}
+
+.chatbotFrame {
+    border: none !important;
+    z-index: 9999; 
+}
+
+#chatbotButton {
+    position: fixed;
+    background-color: var(--primary);
+    bottom: 9em; 
+    border-radius: 50%;
+    right: 4em; 
+    z-index: 9998; /* Assurez-vous que le z-index est élevé pour être au-dessus de tous les autres éléments */
+    background-image: url('../img/help.svg'); 
+    background-size: cover; 
+    width: 3.7em; 
+    height: 3.7em; 
+    border: none;
+    cursor: pointer;
+}
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}

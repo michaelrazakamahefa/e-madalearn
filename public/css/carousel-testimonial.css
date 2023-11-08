@@ -1,0 +1,28 @@
+/*Définition des couleurs*/:root {
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+    --white:#fff;
+}
+.progress-buttons {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.progress-button {
+    width: 1em;
+    height:1em;
+    border: none;
+    background-color: #ccc;
+    margin: 0 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.progress-button.active {
+    background-color:var(--primary);
+}
+.item-testimonial:hover .p-testimonial {
+    transform: scale(1.2); 
+    transition: transform 0.3s; 
+}

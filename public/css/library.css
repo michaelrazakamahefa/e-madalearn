@@ -1,0 +1,103 @@
+/*Définition des couleurs*/:root {
+  --primary: #06BBCC;
+  --light: #F0FBFC;
+  --dark: #181d38;
+  --white:#fff;
+}
+
+/*Définition de la police*/
+@font-face {
+  font-family: 'Heebo';
+  src: url('../fonts/Heebo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.filter {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+#bookList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px; 
+}
+
+#bookList div {
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px gray;
+  width: 20%;
+  margin: 15px;
+}
+
+#bookList div:hover{
+  box-shadow: 4px 6px 4px 4px gray;
+}
+
+#bookList div img {
+  /* width: 183px; */
+  height: 276px;
+  width:100%;
+}
+
+#branch{
+  border-radius: 10px;
+  padding: 3px;
+}
+.row-lib{
+  padding-top: 60px;
+}
+.books_available{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h3{
+  text-align: center;
+  padding-top: 15px;
+  font-style: oblique;
+}
+
+/*---------------------- image title------------*/
+.page-header{
+  background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header{
+  height: 25em;
+}
+
+@media screen and (max-width:450px) {
+  .col-2 .btn{
+    font-size: 1.1rem;
+  }
+  #bookList div{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  #bookList div{
+    width:80%;
+  }
+}

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours HTML</title>
+    <link rel="stylesheet" href="../public/css/courses-html.css">
+</head>
+
+<body>
+
+    <!------------------------------------------------------------------ Début En-tête ----------------->
+    <header>
+        <h1 class="title-html">Cours HTML</h1>
+        <a class="img-home" href="../public/index.html"><img class="image" src="../public/img/home-blanc.svg" alt=""></a>
+    </header>
+
+     <!------------------------------------------------------------------ Fin En-tête ----------------->
+    <!------------------------------------------------------------------------- début intro--------------------->
+    <div class="intro-container">
+        <!-- Contenu introductif -->
+        <div id="intro-content">
+            <h2 class="h2-intro">Bienvenue sur notre plateforme de cours !</h1>
+            <p class="p-intro">
+                Vous pouvez commencer par choisir votre niveau d'expertise en HTML.
+                Une fois que vous avez sélectionné un niveau, cochez les cases à cocher lorsque vous avez terminé chaque section.
+                La barre de progression ci-dessous vous aidera à suivre votre avancement. <br>Bon apprentissage !
+            </p>
+        </div>
+
+
+        <!-- Barre de progression -->
+        <div class="progress-container">
+            <span class="progress-label">Votre progression</span>
+            <progress value="0" max="100"></progress>
+        </div>
+
+       
+
+    </div>
+    <!-------------------------------------------------------------------------- fin intro----------------------->
+
+    <!------------------------------------------------------------------ Début carte ------------------->
+    <div class="content-container">
+
+        <!-- Bouton pour réinitialiser -->
+        <button class="resetButton"><img src="../public/img/restart.svg" alt=""></button>
+        <!-- fin bouton pour réinitialiser -->
+
+        <div class="course-list">
+
+            <!-- Carte Niveau débutant -->
+            
+            <div class="course-item" id="beginner-card">
+                <h2>Niveau Débutant</h2>
+                <p>Difficulté: Facile</p>
+                <p>Temps estimé: 4 heures</p>
+                <ul class="chapter-list">
+                    <li>Chapitre 1: Introduction à HTML</li>
+                    <li>Chapitre 2: Les Balises et Éléments</li>
+                    <li>Chapitre 3: Les Liens et Images</li>
+                    <li>Chapitre 4: Les Listes</li>
+                </ul>
+            </div>
+
+            <!-- Carte Niveau intermédiaire -->
+
+            <div class="course-item" id="intermediate-card">
+                <h2>Niveau Intermédiaire</h2>
+                <p>Difficulté: Moyenne</p>
+                <p>Temps estimé: 6 heures</p>
+                <ul class="chapter-list">
+                    <li>Chapitre 1: Les Formulaires</li>
+                    <li>Chapitre 2: Les Tableaux</li>
+                    <li>Chapitre 3: Les Cadres et iFrames</li>
+                </ul>
+            </div>
+
+            <!-- Carte Niveau avancé -->
+
+            <div class="course-item" id="advanced-card">
+                <h2>Niveau Avancé</h2>
+                <p>Difficulté: Avancée</p>
+                <p>Temps estimé: 8 heures</p>
+                <ul class="chapter-list">
+                    <li>Chapitre 1: Les CSS</li>
+                    <li>Chapitre 2: Le JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------- fin carte----------------------->
+
+
+        <!-----------------------------------------------------------Début détail des chapitres----------------->
+
+    <div class="detail-chapter">
+
+        <!------------------------------------------- Niveau débutant ---------------------------->
+        
+        <div id="beginner-content" class="course-content">
+
+            <!-----Chapitre 1 : Introduction à HTML-->
+
+            <div id="beginner-chapter1" class="chapter-content">
+
+
+                <div class="chapter-title">
+
+                    <h1 class="beginner-level">HTML - Niveau débutant</h1>
+                    <h2>Chapitre 1 : Introduction à HTML</h2>
+                    <p>
+                        Le chapitre 1, intitulé 'Introduction à HTML', vous plongera dans l'univers du langage de balisage HTML.
+                        Vous découvrirez les bases essentielles pour créer une structure de page web, en utilisant des balises et des éléments.
+                        Vous apprendrez à organiser le contenu de manière sémantique et à ajouter des éléments tels que des titres, des paragraphes et des listes.
+                        Ce chapitre pose les fondations nécessaires pour comprendre et créer des pages web interactives et informatives.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+                <div class="chapter-details">
+
+                    <div class="overlay">
+
+                        <div class="details-popup">
+
+                            <div class="popup-header">
+                                <h3>Détails du Chapitre</h3>
+                                <button class="close-details"><img src="../public/img/closed.svg" alt=""></button>
+                            </div>
+
+                            <div class="popup-content">
+
+                                <!-- Téléchargement PDF -->
+                                <a class="pdf-link download-button" href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le cours PDF <img src="../public/img/download.svg" alt=""></a>
+                                <!-- Case à cocher pdf -->
+                                <label>
+                                    <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                                </label>
+
+
+                                <!-- Téléchargement Vidéo -->
+                                <a class="download-button" href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger les vidéo du cours <img src="../public/img/download.svg" alt=""></a>
+                                <label>
+                                    <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                                </label>
+
+
+                                <!-- Lien vers le quizz -->
+                                <a href="quizz.html">Cliquez ici pour passer le Quizz d'évaluation</a>
+                                <label>
+                                    <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                                </label>
+
+
+                                <!-- Upload mini projet -->
+                                <label for="miniProjetFile1">Téléverser le mini projet <img src="../public/img/upload.svg" alt=""></label>
+                                <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                                <!-- Case à cocher terminé le projet-->
+                                <label>
+                                    <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                                </label>
+
+
+                                <!-- Checkbox pour indiquer la fin du chapitre -->
+                                <label>
+                                    <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                                </label>
+
+                                <button class="abandon-button">Abandonner</button>
+                                <button class="validate-button">Valider</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----Chapitre 2 Chapitre 2: Les Balises et Éléments -->
+
+            <div id="beginner-chapter2" class="chapter-content">
+
+
+                <div class="chapter-title">
+
+                    <h1 class="beginner-level">HTML - Niveau débutant</h1>
+                    <h2>Chapitre 2: Les Balises et Éléments</h2>
+                    <p>
+                        Dans le chapitre 2, intitulé 'Les Balises et Éléments', nous plongerons plus en profondeur dans le langage HTML.
+                        Vous découvrirez les différentes balises et éléments disponibles, ainsi que leur rôle dans la structuration d'une page web.
+                        Vous apprendrez à utiliser ces balises pour définir les différents éléments d'une page, tels que les titres, les paragraphes, les liens, les images et bien plus encore.
+                        Comprendre le rôle et l'utilisation correcte de chaque balise est essentiel pour créer des pages web bien organisées et lisibles pour les utilisateurs et les moteurs de recherche.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+                <div class="chapter-details">
+
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+                    <button class="close-details">Fermer</button>
+                    <button class="validate-details">Valider</button>
+
+
+                </div>
+            </div>
+
+            <!----Chapitre 3: Les Liens et Images ------------------>
+
+            <div id="beginner-chapter3" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="beginner-level">HTML - Niveau débutant</h1>
+                    <h2>Chapitre 3: Les Liens et Images</h2>
+                    <p>
+                        Dans le chapitre 3, intitulé 'Les Liens et Images', nous aborderons les éléments essentiels pour rendre une page web interactive et visuellement attrayante.
+                        Vous apprendrez à insérer des liens hypertextes pour rediriger les utilisateurs vers d'autres pages web ou ressources en ligne.
+                        De plus, vous découvrirez comment intégrer des images pour enrichir le contenu visuel de votre site.
+                        Comprendre comment insérer des liens et des images de manière efficace est crucial pour offrir une expérience utilisateur fluide et engageante.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+      
+                <div class="chapter-details">
+
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+
+                </div>
+            </div>
+
+             <!----Chapitre 4: Les Listes --------------------------->
+
+            <div id="beginner-chapter4" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="beginner-level">HTML - Niveau débutant</h1>
+                    <h2>Chapitre 4: Les Listes</h2>
+                    <p>
+                        Dans le chapitre 4, intitulé 'Les Listes', nous explorerons les différentes façons de structurer l'information sur une page web à l'aide de listes.
+                        Vous apprendrez à créer des listes ordonnées pour séquencer des éléments de manière numérique ou alphabétique.
+                        De plus, nous aborderons les listes non ordonnées qui permettent de présenter des éléments de manière libre, sans ordre spécifique.
+                        En maîtrisant les différentes types de listes, vous serez en mesure d'organiser et de présenter l'information de manière claire et efficace sur vos pages web.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+                <div class="chapter-details">
+
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+
+                </div>
+
+            </div>
+        
+        </div>
+
+     <!------------------------------------------- Intermédiaire ---------------------------->
+
+
+        <div id="intermediate-content" class="course-content">
+
+            <!---- Chapitre 1: Les Formulaires --------------------->
+            
+
+            <div id="intermediate-chapter1" class="chapter-content">
+
+
+                <div class="chapter-title">
+
+                    <h1 class="intermediate-level">HTML - Niveau intermédiaire</h1>
+                    <h2>Chapitre 1: Les Formulaires</h2>
+                    <p>
+                        Dans ce premier chapitre intitulé 'Les formulaires',nous plongerons dans l'un des éléments essentiels du développement web interactif.
+                        Les formulaires permettent aux utilisateurs de saisir et de soumettre des informations, que ce soit pour s'inscrire à un site, effectuer des recherches ou remplir des questionnaires.
+                        Nous explorerons les différentes balises et éléments nécessaires pour créer des formulaires fonctionnels et conviviaux.
+                        De plus, nous aborderons les bonnes pratiques de conception pour garantir une expérience utilisateur optimale.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+                
+                </div>
+                <div class="chapter-details">
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+                </div>
+            </div>
+
+            <!---- Chapitre 2: Les Tableaux------------------------->
+
+            <div id="intermediate-chapter2" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="intermediate-level">HTML - Niveau intermédiaire</h1>
+                    <h2>Chapitre 2: Les Tableaux</h2>
+                    <p>
+                        Dans ce deuxième chapitre intitulé 'Les Tableaux', nous allons plonger dans l'un des outils les plus puissants pour organiser et présenter des données sur une page web.
+                        Les tableaux permettent de structurer des informations sous forme de lignes et de colonnes, offrant ainsi une disposition claire et ordonnée. 
+                        Nous aborderons les balises et les attributs essentiels pour créer et personnaliser des tableaux.
+                        De plus, nous verrons comment les styles CSS peuvent être appliqués pour améliorer l'apparence et la lisibilité des tableaux sur votre site web.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+                <div class="chapter-details">
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+        
+        
+                </div>
+            </div>
+
+            <!---- Chapitre 3: Les Cadres et iFrames----------------->
+
+            <div id="intermediate-chapter3" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="intermediate-level">HTML - Niveau intermédiaire</h1>
+                    <h2>Chapitre 3: Les Cadres et iFrames</h2>
+                    <p>
+                        Dans ce troisième chapitre intitulé 'Les Cadres et iFrames', nous allons explorer des techniques avancées pour structurer et afficher du contenu sur une page web.
+                        Les cadres (ou frames en anglais) permettent de diviser la fenêtre du navigateur en plusieurs zones indépendantes, chacune pouvant afficher une page web distincte.
+                        De plus, nous allons découvrir les iFrames, qui sont des éléments HTML permettant d'insérer une page web dans une autre.
+                        Nous aborderons les attributs et les méthodes pour contrôler l'affichage et l'interaction avec ces éléments, offrant ainsi des options flexibles pour la présentation de contenu sur votre site web.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+                <div class="chapter-details">
+
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!----------------------------------------------Avancé---------------------------------------->
+
+
+        <div id="advanced-content" class="course-content">
+
+            <!---- Chapitre 1: Les CSS -------------->
+
+            <div id="advanced-chapter1" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="advanced-level">HTML - Niveau avancé</h1>
+                    <h2>Chapitre 1: Les Formulaires Avancés</h2>
+                    <p>
+                        Dans ce chapitre, nous plongerons en profondeur dans les CSS (Cascading Style Sheets), l'un des piliers fondamentaux du développement web. Vous découvrirez comment utiliser les CSS pour contrôler la mise en forme et la présentation de vos pages web.
+                        Des sélecteurs CSS avancés aux techniques de mise en page flexibles et responsives, ce chapitre vous permettra de maîtriser les styles et de créer des designs web élégants et dynamiques.
+                        Il y aura plus de projet et d'exercice ici que de cours. C'est le niveau avancé.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+                    
+
+                </div>
+
+                <div class="chapter-details">
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+
+                </div>
+            </div>
+
+            <!---- Chapitre 2: Le javascript -------------->
+
+            <div id="advanced-chapter2" class="chapter-content">
+
+                <div class="chapter-title">
+
+                    <h1 class="advanced-level">HTML - Niveau avancé</h1>
+                    <h2>Chapitre 2: Le Javascript</h2>
+                    <p>
+                        Le chapitre 2 est dédié à l'apprentissage du JavaScript, un langage de programmation essentiel pour le développement web interactif. Vous explorerez les concepts avancés du JavaScript, y compris la manipulation du DOM (Document Object Model),
+                        la gestion des événements, les requêtes asynchrones avec AJAX, et bien plus encore. Grâce à ce chapitre, vous serez en mesure de créer des applications web interactives,
+                        de dynamiser vos sites et d'ajouter des fonctionnalités avancées pour offrir une expérience utilisateur exceptionnelle.
+                        Il y aura plus de projet et d'exercice ici que de cours. C'est le niveau avancé.
+                    </p>
+                    <button class="show-details">Apprendre</button>
+
+                </div>
+
+
+                <div class="chapter-details">
+
+
+                    <!-- Téléchargement PDF -->
+                    <a href="pdf_chapitre1.pdf" download="chapitre1.pdf">Télécharger le PDF</a>
+
+
+                    <!-- Case à cocher pdf -->
+                    <label>
+                        <input type="checkbox" class="pdfCheckbox" onclick="markComplete(this)"> J'ai fini de lire le PDF
+                    </label>
+
+
+                    <!-- Téléchargement Vidéo -->
+                    <a href="lien_vers_votre_video.mp4" download="nom_de_la_video.mp4">Télécharger la vidéo</a>
+                    <label>
+                        <input type="checkbox" class="videoCheckbox" onclick="markComplete(this)"> J'ai fini de regarder la vidéo
+                    </label>
+
+
+                    <!-- Lien vers le quizz -->
+                    <a href="quizz.html">Passer le Quizz</a>
+                    <label>
+                        <input type="checkbox" class="quizzCheckbox" onclick="markComplete(this)"> J'ai fini le Quizz
+                    </label>
+
+
+                    <!-- Upload mini projet -->
+                    <label for="miniProjetFile1">Téléverser le mini projet</label>
+                    <input type="file" id="miniProjetFile1" class="miniProjetFile" accept=".zip, .rar">
+
+
+                    <!-- Case à cocher terminé le projet-->
+                    <label>
+                        <input type="checkbox" class="miniProjetCheckbox" onclick="markComplete(this)"> J'ai terminé le mini projet
+                    </label>
+
+
+                    <!-- Checkbox pour indiquer la fin du chapitre -->
+                    <label>
+                        <input type="checkbox" class="chapterCheckbox" onclick="markComplete(this)"> J'ai fini ce chapitre
+                    </label>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../public/js/courses-html.js" defer></script>
+</body>
+
+</html>

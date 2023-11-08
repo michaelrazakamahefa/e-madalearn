@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprentissage HTML, CSS, JavaScript</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/retour-haut-effet.css">
+    <link rel="stylesheet" href="../public/css/library.css">
+</head>
+
+<body>
+    <!-------------------------- barre de navigation ---------------->
+    <header>
+        <nav class="navbar">
+            <a href="../public/index.html" class="navbar-brand">e-MadaLearning</a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="../public/index.html" class="nav-link">ACCUEIL</a></li>
+                <li class="nav-item"><a href="../views/course.html" class="nav-link">COURS</a></li>
+                <li class="nav-item"><a href="../views/about.html" class="nav-link">À PROPOS</a></li>
+                <li class="nav-item"><a href="../views/contact.html" class="nav-link">CONTACT</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Autres Pages</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item nav-item"><a href="team.html" class="nav-link">La team</a></li>
+                        <li class="dropdown-item nav-item"><a href="pricing-card.html" class="nav-link">Tarifs</a></li>
+                        <li class="dropdown-item nav-item"><a href="../views/quiz/index.html" class="nav-link">Quizz d'entrainement</a></li>
+                        <li class="dropdown-item nav-item"><a href="../views/library.html" class="nav-link">Bibliothèques</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item sign-item"><a href="signin-signup.html" class="nav-link">JOIN NOW</a><img src="../public/img/login.svg" height="15em"></li>
+            </ul>
+        </nav>
+    </header>
+    <!------------------------------ fin de la barre de navigation -->
+
+    <!------------------------------- start library------------------>
+
+
+    <div class="library-container">
+        <div class="title-container">
+            <div class="books_available"><h2>Books in Inventory</h2></div>
+        </div>
+        <div class="filter">
+            <label for="branch">Select Branch:</label>
+            <select id="branch">
+                <option value="">All</option>
+                <option value="cs">Computer Science Engineering</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="ec">Electronics and Communication Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="it">Information Technology</option>
+            </select>
+          </div>
+        <div id="bookList">
+            <div data-branch="cs">
+                <a href="../pdfs/Data-structures-Using-C.pdf"><img src="../public/img/book1.jpg" alt="Book 1"></a>
+                <h3>Data Structures <br> using C</h3>
+                <p>Author: Author 1</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Java-Programming.pdf"><img src="../public/img/book2.jpg" alt="Book 2"></a>
+                <h3>Java Programming</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/OPPS-with-C.pdf"><img src="../public/img/book13.png" alt="Book 13"></a>
+                <h3>OOPS with C++</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Intro-do-Algorithms.pdf"><img src="../public/img/book14.png" alt="Book 14"></a>
+                <h3>Intro to Algorithms</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Database-System-Concepts.pdf"><img src="../public/img/book15.png" alt="Book 15"></a>
+                <h3>Database System Concepts</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Data-Mining.pdf"><img src="../public/img/book16.png" alt="Book 16"></a>
+                <h3>Data Mining. Concepts and Techniques</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Theory.pdf"><img src="../public/img/book17.png" alt="Book 17"></a>
+                <h3>Theory-of-Computation</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Machine-Learning.pdf"><img src="../public/img/book18.png" alt="Book 18"></a>
+                <h3>Machine Learning</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <!-- New added books -->
+            <div data-branch="cs">
+                <a href="../pdfs/Systems-Analysis.pdf"><img src="../public/img/book19.png" alt="Book 19"></a>
+                <h3>Systems Analysis & Design</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="cs">
+                <a href="../pdfs/Computer-Networks.pdf" src="../public/img/book20.png" alt="Book 20"></a>
+                <h3>Computer Networks</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Computer Science Engineering</p>
+            </div>
+            <div data-branch="ce">
+                <a href="../pdfs/Railway-Bridges-and-Tunnels.pdf"><img src="../public/img/book3.jpg" alt="Book 3"></a>
+                <h3>Railway Bridges and <br>Tunnels</h3>
+                <p>Author: Author 2</p>
+                <p>Category: Civil Engineering</p>
+            </div>
+          <div data-branch="ce">
+            <a href="../pdfs/Strenghts-of-Materials.pdf"><img src="../public/img/book4.jpg" alt="Book 4"></a>
+            <h3>Strengths of <br>Materials</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Civil Engineering</p>
+        </div>
+        <div data-branch="ce">
+            <a href="../pdfs/Engineering-Geology.pdf"><img src="../public/img/book5.jpg" alt="Book 5"></a>
+            <h3>Engineering Geology</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Civil Engineering</p>
+        </div>
+        <div data-branch="ec">
+            <a href="../pdfs/Electronic-instrumentation-and-Measurments.pdf"><img src="../public/img/book6.jpg" alt="Book 6"></a>
+            <h3>Electronic<br> instrumentation<br> and Measurements</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Category: Electronics and Communications Engineering</p>
+        </div>
+        <div data-branch="ec">
+            <a href="../pdfs/Network-Analysis.pdf"><img src="../public/img/book7.jpg" alt="Book 7"></a>
+            <h3>Network Analysis</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Category: Electronics and Communications Engineering</p>
+        </div>
+        <div data-branch="ec">
+            <a href="../pdfs/An-Introduction-to-Microprocessor-8085.pdf"><img src="../public/img/book22.png" alt="Book 22"></a>
+            <h3>An Introduction to Microprocessor 8085</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Electronics and Communications Engineering</p>
+          </div>
+          <div data-branch="ec">
+            <a href="../pdfs/Advanced-Microprocessors -and-Peripherals.pdf"><img src="../public/img/book23.png" alt="Book 23"></a>
+            <h3>Advanced Microprocessors and Peripherals</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Electronics and Communications Engineering</p>
+          </div>
+          <div data-branch="me">
+            <a href="../pdfs/Manufacturing-Processes.pdfd"><img src="../public/img/book8.jpg" alt="Book 8"></a>
+            <h3>Manufacturing <br>Processes</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Mechanical Engineering2</p>
+          </div>
+          <div data-branch="me">
+            <a href="../pdfs/An-Introduction-To-thermodynamics.pdf"><img src="../public/img/book9.jpg" alt="Book 9"></a>
+            <h3>An Introduction To <br>Thermodynamics</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Mechanical Engineering</p>
+          </div>
+          <div data-branch="me">
+            <a href="../pdfs/Machine-Drawing.pdf"><img src="../public/img/book10.jpg" alt="Book 10"></a>
+            <h3>Machine Drawing</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Mechanical Engineering</p>
+          </div>
+          <div data-branch="me">
+            <a href="../pdfs/Applied-Thermodynamics.pdf"><img src="../public/img/book21.png" alt="Book 21"></a>
+            <h3>Applied Thermodynamics</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Information Technology</p>
+          </div>
+          <div data-branch="it">
+            <a href="../pdfs/Object-Oriented-Programming-Methodology.pdf"><img src="../public/img/book11.jpg" alt="Book 11"></a>
+            <h3>Object Oriented <br>Programming <br>Methodology</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Category 2</p>
+          </div>
+          <div data-branch="it">
+            <a href="../pdfs/Electric-Circuits-and-Electronics-Devices.pdf"><img src="../public/img/book12.jpg" alt="Book 12"></a>
+            <h3>Electric Circuits and<br> Electronics Devices</h3>
+            <p>Author: Author 2</p>
+            <p>Category: Information Technology</p>
+          </div>
+          <div data-branch="it">
+            <a href="../pdfs/Digital-logic-and-Compiler-Design.pdf"><img src="../public/img/book12.jpg" alt="Book 12"></a>
+            <h3>Digital logic and <br> Compiler Design</h3>
+            <p>Author: Moris Mano</p>
+            <p>Category: Category 2</p>
+          </div>
+          <div data-branch="it">
+             <a href="../pdfs/Discrete-Mathematics.pdf"><img src="../public/img/book25.png" alt="Book 12"></a>
+            <h3>Discrete <br> Mathematics</h3>
+            <p>Author: Moris Mano</p>
+            <p>Category: Information Technology</p>
+          </div>
+          <div data-branch="it">
+            <a href="../pdfs/Graph-Theory.pdf"><img src="../public/img/book26.png" alt="Book 12"></a>
+            <h3>Graph <br> Theory</h3>
+            <p>Author: Moris Mano</p>
+            <p>Category: Information Technology</p>
+          </div>
+          <div data-branch="it">
+            <a href="../pdfs/Higher-Engineering-Mathematics.pdf"><img src="../public/img/book27.png" alt="Book 12"></a>
+            <h3>Higher Engineering<br> Mathematics</h3>
+            <p>Author: Moris Mano</p>
+            <p>Category: Information Technology</p>
+          </div>
+          <br>
+    </div>
+    <!------------------------------------------- end library---------------------------------->
+
+    
+  <!-- Footer Start -->
+  <footer>
+    <div class="container-footer-up">
+        <div class="footer-up">
+            <div class="container-quick-link">
+                <h4 class="title-quick-link">Quick Link</h4>
+                <a class="btn-quick-link" href="">About Us</a>
+                <a class="btn-quick-link" href="">Contact Us</a>
+                <a class="btn-quick-link" href="">Privacy Policy</a>
+                <a class="btn-quick-link" href="">Terms & Condition</a>
+                <a class="btn-quick-link" href="">FAQs & Help</a>
+            </div>
+            <div class="container-contact">
+                <h4 class="title-contact">Contact</h4>
+                <img class="item-contact" src="../public/img/location.svg" alt=""><p class="adresse-contact detail-adress">123 Street, New York, USA</p><br>
+                <img class="item-contact" src="../public/img/call.svg" alt=""><p class="phone-contact detail-adress">+012 345 67890</p><br>
+                <img class="item-contact" src="../public/img/mail.svg" alt=""><p class="mail-contact detail-adress">info@example.com</p>
+                <div class="container-social-media">
+                    <a class="btn-social-twitter" href=""><img class="logo-social-media" src="../public/img/logo-twitter.png" alt=""></a>
+                    <a class="btn-social-fb" href=""><img class="logo-social-media" src="../public/img/facebook.png" alt=""></a>
+                    <a class="btn-social-linkedin" href=""><img class="logo-social-media" src="../public/img/instagram.png" alt=""></a>
+                </div>
+            </div>
+            <div class="container-gallery">
+                <h4 class="title-gallery">Gallery</h4>
+                <div class="container-img">
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-1.jpg" height="40px" alt="">
+                    </div>
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-2.jpg" height="40px" alt="">
+                    </div>
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-3.jpg" height="40px" alt="">
+                    </div>
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-2.jpg" height="40px" alt="">
+                    </div>
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-3.jpg" height="40px" alt="">
+                    </div>
+                    <div class="item-gallery">
+                        <img class="img-gallery" src="../public/img/course-1.jpg" height="40px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container-newsletter">
+                <h4 class="title-newsletter">Newsletter</h4>
+                <p>Veuillez vous inscrire à notre newsletter</p>
+                <div class="container-newsletter-email">
+                    <input class="email-newspaper" type="text" placeholder="Your email">
+                    <button type="button" class="btn-email-newspaper">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-copyright">
+        <div class="content-copyright">
+            <div class="row-copyright">
+                <div class="item-copyright">
+                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. Designed By<a class="border-bottom" href="#">Arnaud RAZAKAMAHEFA</a>
+                </div>
+                <div class="container-footer-menu">
+                    <div class="content-footer-menu">
+                        <a href="">Home</a>
+                        <a class="a-cookies" href="">Cookies</a>
+                        <a class="a-help" href="">Help</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="retour-haut"><img src="img/arrow_circle_up.svg" alt=""></a>
+
+    <!-- importationd des scripts js-->
+    <script src="../public/js/library.js"></script>
+</body>
+</html>
